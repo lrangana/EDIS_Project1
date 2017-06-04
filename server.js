@@ -92,7 +92,7 @@ app.post('/add', function(request, response){
 	if(request.session && request.session.user){
 	var num1 = parseInt(request.body.num1); 
 	var num2 = parseInt(request.body.num2); 
-	if(isNaN(num1) || isNaN(num2) || !(num1.matches("^[0-9]*$"))){
+	if(isNaN(num1) || isNaN(num2)){
 		response.json({"message" : "The numbers you entered are not valid "});
 	}  else{		
 	var result = num1 + num2;
