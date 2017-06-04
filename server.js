@@ -10,7 +10,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 
-var port     = process.env.PORT || 8080;
+var port     = process.env.PORT || 3000;
 var mysql = require('mysql');
 
 
