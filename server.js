@@ -2,7 +2,7 @@
 
 // setting up & getting all the tools we need
 var express  = require('express');
-var app      = express();
+var app     = express();
 
 //body parser
 var bodyParser = require('body-parser');
@@ -10,7 +10,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 
-var port     = process.env.PORT || 3000;
+var port     = process.env.PORT || 4000;
 var mysql = require('mysql');
 
 
@@ -128,7 +128,7 @@ app.post('/multiply', function(req, res){
 	var num2 = parseInt(req.body.num2); 
 	var result = num1 * num2;
 	if(isNaN(num1) || isNaN(num2)){
-	res.json({"message" : "The numbers you entered are not valid "}); 
+	res.json({"message" : "The numbers you entered are not valid"}); 
  }	else{
 		res.json({"message" : "The action was successful","result"  : result});	
 	}
