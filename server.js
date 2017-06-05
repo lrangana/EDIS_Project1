@@ -93,7 +93,7 @@ app.post('/add', function(request, response){
 	var num1 = parseInt(request.body.num1); 
 	var num2 = parseInt(request.body.num2); 
 	if(isNaN(num1) || isNaN(num2)){
-		response.json({"message" : "The numbers you entered are not valid "});
+		response.json({"message" : "The numbers you entered are not valid"});
 	}  else{		
 	var result = num1 + num2;
 	response.json({"message" : "The action was successful","result"  : result});	
@@ -111,7 +111,7 @@ app.post('/divide', function(request, response){
 	var num2 = parseInt(request.body.num2); 
 	var result = num1 / num2;
 	if(isNaN(num1) || isNaN(num2) || num2 == 0){
-	response.json({"message" : "The numbers you entered are not valid "}); 
+	response.json({"message" : "The numbers you entered are not valid"}); 
  }	else{
 		response.json({"message" : "The action was successful","result"  : result});	
 	}
